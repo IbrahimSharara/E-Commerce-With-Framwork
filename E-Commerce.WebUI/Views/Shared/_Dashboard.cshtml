@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ECommerce.WebUI</title>
+    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ECommerce.WebUI.styles.css" asp-append-version="true" />
+    <link href="~/Content/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/Content/all.min.css" rel="stylesheet">
+    @RenderSection("datatable" , false)
+</head>
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-action="index" asp-controller="Dashboard" asp-area="Admin">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="index" asp-controller="Category" asp-area="Admin">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <p>
+                    <a class="nav-link collapsed" href="#categories" data-bs-toggle="collapse"
+                       data-bs-target="#categories" aria-expanded="true" aria-controls="categories">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>categories</span>
+                    </a>
+                </p>
+                <div id="categories" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" asp-action="index" asp-controller="Category" asp-area="Admin">Show all Categors</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <p>
+                    <a class="nav-link collapsed" href="#supplier" data-bs-toggle="collapse"
+                       data-bs-target="#supplier" aria-expanded="true" aria-controls="supplier">
+                        <i class="fab fa-supple"></i>
+                        <span>supplier</span>
+                    </a>
+                </p>
+                <div id="supplier" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" asp-action="index" asp-controller="Supplier" asp-area="Admin">
+                            Show All Suppliers
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <p>
+                    <a class="nav-link collapsed" href="#brand" data-bs-toggle="collapse"
+                       data-bs-target="#brand" aria-expanded="true" aria-controls="brand">
+                        <i class="fas fa-copyright"></i>
+                        <span>brand</span>
+                    </a>
+                </p>
+                <div id="brand" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <p>
+                    <a class="nav-link collapsed" href="#product" data-bs-toggle="collapse"
+                       data-bs-target="#product" aria-expanded="true" aria-controls="product">
+                        <i class="fab fa-product-hunt"></i>
+                        <span>product</span>
+                    </a>
+                </p>
+                <div id="product" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <p>
+                    <a class="nav-link collapsed" href="#productImages" data-bs-toggle="collapse"
+                       data-bs-target="#productImages" aria-expanded="true" aria-controls="productImages">
+                        <i class="fas fa-images"></i>
+                        <span>product Images</span>
+                    </a>
+                </p>
+                <div id="productImages" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <p>
+                    <a class="nav-link collapsed" href="#users" data-bs-toggle="collapse"
+                       data-bs-target="#users" aria-expanded="true" aria-controls="users">
+                        <i class="fas fa-users"></i>
+                        <span>users</span>
+                    </a>
+                </p>
+                <div id="users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            <!-- Sidebar Message -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>E-Commerce</strong>Dashboard</p>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ibrahim Sharara</span>
+                            <!-- Dropdown - User Information -->
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; E-Commerce 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Scripts/jquery/dist/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Scripts/sb-admin-2.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

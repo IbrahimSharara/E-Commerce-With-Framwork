@@ -1,0 +1,127 @@
+﻿@model List<E_Commerce.DAL.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+@section datatable
+    {
+    @*<link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+}
+<!-- Modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success mb-3" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" id="modalBtn" onclick="ShowModal()">
+    Add New Category
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="ModalContent">
+    </div>
+</div>
+
+<table class="table table-bordered text-center" id="table_id">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                Update
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    <button type="button" class="btn btn-warning mb-3" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropForDetails" id="modalBtn" onclick="ShowDetails(@item.ID)">
+                        Details
+                    </button>
+                    <div class="modal fade" id="staticBackdropForDetails" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" id="ModalContentForDetails">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropForUpdate" id="modalBtn" onclick="Update(@item.ID)">
+                        Update
+                    </button>
+                    <div class="modal fade" id="staticBackdropForUpdate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" id="ModalContentForUpdate">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <a href="/Admin/Category/Delete/@item.ID" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+@section Scripts
+    {
+    <script src="~/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="~/datatables/js/datatables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#table_id').dataTable({})
+        });
+    </script>
+}
+<script>
+    function ShowModal() {
+        $.ajax({
+            url: "/Admin/Category/Add",
+            data: {},// if have more than one data to send at the url
+            success: function (result) {
+                document.getElementById("ModalContent").innerHTML = result;
+            }
+        });
+    }
+</script>
+
+<script>
+    function ShowDetails(id) {
+        $.ajax({
+            url: "/Admin/Category/Details",
+            data: { id, id },// if have more than one data to send at the url
+            success: function (result) {
+                document.getElementById("ModalContentForDetails").innerHTML = result;
+            }
+        });
+    }
+</script>
+<script>
+    function Update(id) {
+        $.ajax({
+            url: "/Admin/Category/Update",
+            data: { id, id },// if have more than one data to send at the url
+            success: function (result) {
+                document.getElementById("ModalContentForUpdate").innerHTML = result;
+            }
+        });
+    }
+</script>

@@ -1,0 +1,21 @@
+﻿@model E_Commerce.VM.ViewModels.CategoryVM
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title  " id="staticBackdropLabel">@Model.Name Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+        <div class="modal-body">
+            <div class="container">
+                @Html.LabelFor(c => c.Name)
+                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", disabled = true })
+            </div>
+            <div class="container">
+                @Html.LabelFor(c => c.Description)
+                @Html.TextBoxFor(c => c.Description, new { @class = "form-control disabled" , disabled = true})
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model E_Commerce.VM.ViewModels.SupplierVM
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Update @Model.SupplierName</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    @*<form asp-action="Update">*@
+    @using (Html.BeginForm("Update", "Supplier", FormMethod.Post))
+    {
+        <div class="modal-body">
+            <div class="container">
+                @Html.LabelFor(c => c.SupplierID)
+                @Html.TextBoxFor(c => c.SupplierID, new { @class = "form-control" ,  })
+                @Html.ValidationMessageFor(c => c.SupplierID)
+            </div>
+            <div class="container">
+                @Html.LabelFor(c => c.SupplierName)
+                @Html.TextBoxFor(c => c.SupplierName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.SupplierName)
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success">Update</button>
+        </div>
+        @*</form>*@
+    }
+</div>
+<script src="~/Scripts/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

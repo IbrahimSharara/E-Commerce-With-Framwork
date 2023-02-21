@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<h1 class="text-capitalize font-weight-bolder display-3 text-center">
+    Welcome to dashboard choose which department you want to add its data
+</h1>
+<div class="container">
+    <div class="row">
+        <a class="btn btn-primary col" asp-action="index" asp-controller="Category" asp-area="Admin">Categorys</a>
+        <a class="btn btn-secondary col" asp-action="index" asp-controller="Supplier" asp-area="Admin">Suppliers</a>
+    </div>
+</div>
