@@ -1,7 +1,9 @@
 ﻿using E_Commerce.DAL;
 using E_Commerce.VM.ViewModels;
+using E_Commerce.WebUI.Models;
 using ECommerce.BLL.Interfaces;
 using ECommerce.BLL.Srevices;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -100,6 +102,14 @@ namespace E_Commerce.WebUI.Areas.Admin.Controllers
             else
                 ViewBag.result = "Error";
             return RedirectToAction(nameof(Index));
+        }
+        #endregion
+
+        #region Get All and return json
+        public async Task<ActionResult> GetAllJson()
+        {
+            var cat = await Repo.GetAll();
+            return Json(cat, JsonRequestBehavior.AllowGet);
         }
         #endregion
     }

@@ -1,3 +1,5 @@
+G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.csproj.AssemblyReference.cache
+G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.csproj.CoreCompileInputs.cache
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\E-Commerce.WebUI.dll.config
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\E-Commerce.WebUI.dll
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\E-Commerce.WebUI.pdb
@@ -85,8 +87,6 @@ G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\System.Web.WebPages.Razor.xml
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\Newtonsoft.Json.xml
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\Antlr3.Runtime.pdb
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.csproj.AssemblyReference.cache
-G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.csproj.CoreCompileInputs.cache
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.csproj.CopyComplete
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.dll
 G:\Work\E-CommerceFramwork\E-Commerce.WebUI\obj\Debug\E-Commerce.WebUI.pdb
